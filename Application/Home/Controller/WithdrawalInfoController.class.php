@@ -5,6 +5,7 @@ class WithdrawalInfoController extends Controller {
     public function index(){
         $model = M('withdrawalinfo');
         $data = $model -> select();
-        dump($data);
+        $this -> assign('data',$data);
+        $this -> display();
     }
 }

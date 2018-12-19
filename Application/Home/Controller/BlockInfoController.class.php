@@ -1,9 +1,9 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class WithdrawalHistoryController extends Controller {
+class BlockInfoController extends Controller {
     public function index(){
-        $model = M('withdrawalhistory');
+        $model = M('blockinfo');
         $args = array(
             "chain_id" => "1",
         );

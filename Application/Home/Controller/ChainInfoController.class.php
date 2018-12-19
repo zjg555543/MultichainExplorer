@@ -5,6 +5,8 @@ class ChainInfoController extends Controller {
     public function index(){
         $model = M('chaininfo');
         $data = $model -> select();
-        dump($data);
+        
+        $this -> assign('data',$data);
+        $this -> display();
     }
 }
