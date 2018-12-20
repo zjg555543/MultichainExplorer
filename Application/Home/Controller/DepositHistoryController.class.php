@@ -5,7 +5,7 @@ class DepositHistoryController extends Controller {
     public function index(){
         $model = M('deposithistory');
         $args = array(
-            "chain_id" => "1",
+            "chain_id" =>  $_GET['chain_id'],
         );
         $data = $model->where($args)->select(); 
         

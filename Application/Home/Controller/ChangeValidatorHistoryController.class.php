@@ -5,8 +5,9 @@ class ChangeValidatorHistoryController extends Controller {
     public function index(){
         $model = M('changevalidatorhistory');
         $args = array(
-            "chain_id" => "1",
+            "chain_id" => $_GET['chain_id'],
         );
+        
         $data = $model->where($args)->select(); 
         
         $this -> assign('data',$data);

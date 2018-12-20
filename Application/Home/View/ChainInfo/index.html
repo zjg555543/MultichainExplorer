@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"> 
-    <title>BU 主链浏览器</title>
+    <title>子链信息概况-BU 多链浏览器</title>
     <!-- 包含头部信息用于适应不同设备 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 包含 bootstrap 样式表 -->
@@ -11,7 +11,11 @@
 
   <body>
     <div class="container">
-      <h2 >子链信息概况</h2>
+        
+          <br>
+      <h2 ><a href="/MultichainExplorer/home/MainChainInfo/">首页 </a> <a href="#" onClick="javascript :history.go(-1);">返回上一页</a></h2>
+      <h4 >子链信息概况</h4>
+      <br>
       <div class="table-responsive">          
        <table class="table table-striped table-bordered">
          <thead>
@@ -19,6 +23,12 @@
              <th>链ID</th>
              <th>创世信息</th>
              <th>动态信息</th>
+             <th>区块</th>
+             <th>存款</th>
+             <th>存款记录</th>
+             <th>取款</th>
+             <th>取款记录</th>
+             <th>验证节点</th>
            </tr>
          </thead>
          <tbody>
@@ -27,6 +37,12 @@
                 <td class="chain_id">{$vo.chain_id}</td>
                 <td class="chain_create_info">{$vo.chain_create_info}</td>
                 <td class="chain_dynamic_info">{$vo.chain_dynamic_info}</td>
+                <td class="look"><a href="/MultichainExplorer/home/BlockInfo/index/chain_id/{$vo.chain_id}">查看区块</a></td>
+                <td class="look"><a href="/MultichainExplorer/home/DepositInfo/index/chain_id/{$vo.chain_id}">查看存款</a></td>
+                <td class="look"><a href="/MultichainExplorer/home/DepositHistory/index/chain_id/{$vo.chain_id}">查看存款记录</a></td>
+                <td class="look"><a href="/MultichainExplorer/home/WithdrawalInfo/index/chain_id/{$vo.chain_id}">查看取款</a></td>
+                <td class="look"><a href="/MultichainExplorer/home/WithdrawalHistory/index/chain_id/{$vo.chain_id}">查看取款记录</a></td>
+                <td class="look"><a href="/MultichainExplorer/home/ChangeValidatorHistory/index/chain_id/{$vo.chain_id}">查看验证节点</a></td>
             </tr>
             </volist>
          </tbody>
